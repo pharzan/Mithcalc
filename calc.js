@@ -33,34 +33,34 @@ var calc={
     },
 
     operate: function (op) {
-
-            if(parseInt(calc.vm.inpt())){
-            calc.vm.inputs.push(parseInt(calc.vm.inpt()))
+            var vm = calc.vm;
+            if(parseInt(vm.inpt())){
+            vm.inputs.push(parseInt(vm.inpt()))
 
             }
-            if(calc.vm.answer){calc.vm.inputs.push(calc.vm.answer)}
+            if(vm.answer){vm.inputs.push(vm.answer)}
 
 
-            calc.vm.counter++;
+            vm.counter++;
             switch(op.toString()) {
                 case '+':
-                    calc.vm.inpt('');
-                    calc.vm.answer=calc.vm.inputs[calc.vm.inputs.length-2]+calc.vm.inputs[calc.vm.inputs.length-1]
+                    vm.inpt('');
+                    vm.answer=vm.inputs[vm.inputs.length-2]+vm.inputs[vm.inputs.length-1]
                     //console.log('add');
                     break;
                 case '-':
                     //console.log('subtract');
-                    calc.vm.inpt('');
-                    calc.vm.answer=calc.vm.inputs[calc.vm.inputs.length-2]-calc.vm.inputs[calc.vm.inputs.length-1]
+                    vm.inpt('');
+                    vm.answer=vm.inputs[vm.inputs.length-2]-vm.inputs[vm.inputs.length-1]
                     break;
                 case '/':
                     //console.log('divide');
-                    calc.vm.inpt('');
-                    calc.vm.answer=calc.vm.inputs[calc.vm.inputs.length-2]/calc.vm.inputs[calc.vm.inputs.length-1]
+                    vm.inpt('');
+                    vm.answer=vm.inputs[vm.inputs.length-2]/vm.inputs[vm.inputs.length-1]
                     break;
                 case '*':
-                    calc.vm.inpt('');
-                    calc.vm.answer=calc.vm.inputs[calc.vm.inputs.length-2]*calc.vm.inputs[calc.vm.inputs.length-1]
+                    vm.inpt('');
+                    vm.answer=vm.inputs[vm.inputs.length-2]*vm.inputs[vm.inputs.length-1]
                     //console.log('multiply');
                     break;
                 case '=':
@@ -77,8 +77,8 @@ var calc={
 
 
 
-        console.log('counter: ',calc.vm.counter,'inputs: ',calc.vm.inputs);
-        console.info('counter: ',calc.vm.inputs[calc.vm.inputs.length-2]+op+calc.vm.inputs[calc.vm.inputs.length-1],'=',calc.vm.answer);
+        console.log('counter: ',vm.counter,'inputs: ',vm.inputs);
+        console.info('counter: ',vm.inputs[vm.inputs.length-2]+op+vm.inputs[vm.inputs.length-1],'=',vm.answer);
 
 
 
