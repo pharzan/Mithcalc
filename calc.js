@@ -90,7 +90,7 @@ var calc={
 
                     return m('div',[
                                     m('input',{value:calc.vm.inpt(),
-                                                onchange:m.withAttr('value',function(val){calc.vm.inpt(val)})
+                                                onchange:m.withAttr('value',calc.vm.inpt())
                                     }),
                                     m('span','= '+calc.vm.ans()),
                                     m('table',[
