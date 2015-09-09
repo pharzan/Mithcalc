@@ -97,8 +97,7 @@ var calc={
                                                 ctrl.buttons.map(function(row){
 
                                                     return m('tr',row.map(function(number) {
-                                                            return m('td', {
-                                                                class:'btn btn-default',
+                                                            return m('td.btn.btn-default', {
                                                                 onclick: function () {
                                                                     calc.newval(number),
                                                                     console.log('clicked', number);
@@ -111,8 +110,7 @@ var calc={
                                                 ]
                                     ),
                         m('span',ctrl.operators.map(function (op) {
-                            return m('button',{class:'btn btn-primary',
-                                                onclick: function () {
+                            return m('button.btn.btn-default',{onclick: function () {
 
                                                     calc.operate(op)
 
