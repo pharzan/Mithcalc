@@ -10,7 +10,7 @@ header("Access-Control-Allow-Origin: *");
 
 include 'assets\lib\wa_wrapper\WolframAlphaEngine.php';
 $response = 'Nothing here';
-$appID    = 'WK6Y2G-A9H42Y736J';
+$appID    = 'API-CODE-GOES-HERE';
 $qArgs    = array();
 if (isset($_GET['str'])) {
     // echo json_encode($_GET['str']);
